@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>🎯 The Internship Hub — Summer 2027 tech internship trackers & deadlines</title>
+<meta name="description" content="One curated home for the best GitHub tech-internship trackers, deadlines, interview prep and resume resources. Summer 2027 cycle." />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎯</text></svg>" />
+<style>
+  :root{
+    --bg:#0d1117; --bg2:#161b22; --card:#161b22; --border:#30363d;
+    --text:#e6edf3; --muted:#8b949e; --accent:#58a6ff; --accent2:#a371f7;
+    --green:#3fb950; --amber:#d29922; --red:#f85149; --chip:#21262d;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    background:var(--bg); color:var(--text); line-height:1.6;
+    background-image:radial-gradient(60rem 60rem at 80% -10%, rgba(163,113,247,.10), transparent 60%),
+                     radial-gradient(50rem 50rem at -10% 10%, rgba(88,166,255,.10), transparent 60%);
+    background-attachment:fixed;
+  }
+  a{color:var(--accent);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+
+  /* Hero */
+  header{text-align:center;padding:72px 20px 40px}
+  .badge{display:inline-block;font-size:.8rem;color:var(--muted);border:1px solid var(--border);
+         border-radius:999px;padding:4px 14px;margin-bottom:22px;background:var(--bg2)}
+  h1{font-size:clamp(2.2rem,6vw,3.6rem);letter-spacing:-.02em;line-height:1.1;margin-bottom:14px}
+  h1 .grad{background:linear-gradient(90deg,var(--accent),var(--accent2));-webkit-background-clip:text;
+           background-clip:text;-webkit-text-fill-color:transparent}
+  .tagline{color:var(--muted);font-size:1.15rem;max-width:640px;margin:0 auto 28px}
+  .cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;align-items:center}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:11px 20px;border-radius:10px;
+       font-weight:600;border:1px solid var(--border);background:var(--bg2);color:var(--text);
+       transition:.15s transform,.15s border-color}
+  .btn:hover{transform:translateY(-2px);text-decoration:none;border-color:var(--accent)}
+  .btn.primary{background:linear-gradient(90deg,var(--accent),var(--accent2));border:none;color:#fff}
+  .star-wrap{margin-top:22px;display:flex;justify-content:center}
+
+  /* Sections */
+  section{padding:36px 0}
+  h2{font-size:1.6rem;margin-bottom:6px;display:flex;align-items:center;gap:10px}
+  .sub{color:var(--muted);margin-bottom:22px;font-size:.98rem}
+  .grid{display:grid;gap:16px}
+  .g3{grid-template-columns:repeat(auto-fill,minmax(300px,1fr))}
+  .g2{grid-template-columns:repeat(auto-fill,minmax(340px,1fr))}
+
+  .card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:18px 20px;
+        transition:.15s transform,.15s border-color;display:flex;flex-direction:column;gap:8px}
+  .card:hover{transform:translateY(-3px);border-color:var(--accent)}
+  .card h3{font-size:1.08rem;display:flex;align-items:center;gap:8px}
+  .card p{color:var(--muted);font-size:.92rem;flex:1}
+  .card .repo{font-size:.8rem;color:var(--accent);font-family:ui-monospace,SFMono-Regular,Menlo,monospace;word-break:break-all}
+  .tag{display:inline-block;font-size:.72rem;padding:2px 9px;border-radius:999px;background:var(--chip);
+       color:var(--muted);border:1px solid var(--border)}
+
+  /* Deadline alert */
+  .alert{background:linear-gradient(180deg,rgba(248,81,73,.08),rgba(248,81,73,.02));
+         border:1px solid rgba(248,81,73,.35);border-radius:14px;padding:22px 24px}
+  .alert h2{color:var(--red)}
+  table{width:100%;border-collapse:collapse;margin-top:8px;font-size:.93rem}
+  th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--border);vertical-align:top}
+  th{color:var(--muted);font-weight:600;font-size:.82rem;text-transform:uppercase;letter-spacing:.03em}
+  tr:last-child td{border-bottom:none}
+  .pill{font-size:.78rem;font-weight:700;padding:2px 10px;border-radius:999px;white-space:nowrap}
+  .pill.red{background:rgba(248,81,73,.15);color:#ff9d97;border:1px solid rgba(248,81,73,.4)}
+  .pill.amber{background:rgba(210,153,34,.15);color:#e3b341;border:1px solid rgba(210,153,34,.4)}
+  .pill.green{background:rgba(63,185,80,.15);color:#7ee787;border:1px solid rgba(63,185,80,.4)}
+
+  /* Timeline */
+  .timeline{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px;margin-top:8px}
+  .month{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:12px}
+  .month .m{font-weight:700;color:var(--accent);font-size:.85rem;margin-bottom:6px}
+  .month .e{color:var(--muted);font-size:.8rem;line-height:1.4}
+  .month.now{border-color:var(--accent2);box-shadow:0 0 0 1px var(--accent2)}
+  .month.now .m{color:var(--accent2)}
+
+  .cols{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  @media(max-width:720px){.cols{grid-template-columns:1fr}
+    .table-scroll{overflow-x:auto}}
+
+  footer{text-align:center;color:var(--muted);padding:48px 20px;border-top:1px solid var(--border);margin-top:30px;font-size:.9rem}
+  .note{color:var(--muted);font-size:.85rem;background:var(--bg2);border:1px solid var(--border);
+        border-left:3px solid var(--amber);border-radius:8px;padding:12px 16px;margin-top:14px}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <span class="badge">🗓️ Summer 2027 cycle · updated Aug 2026</span>
+    <h1>🎯 The <span class="grad">Internship Hub</span></h1>
+    <p class="tagline">One curated home for the best GitHub tech-internship trackers, deadlines, interview prep &amp; resume resources — all vetted, all in one place.</p>
+    <div class="cta">
+      <a class="btn primary" href="https://github.com/gavinwunz/internship-hub">⭐ View on GitHub</a>
+      <a class="btn" href="#trackers">🔴 Live Trackers</a>
+      <a class="btn" href="#deadlines">🗓️ Deadlines</a>
+    </div>
+    <div class="star-wrap">
+      <a class="github-button" href="https://github.com/gavinwunz/internship-hub"
+         data-color-scheme="no-preference: dark; light: dark; dark: dark;"
+         data-icon="octicon-star" data-size="large" data-show-count="true"
+         aria-label="Star gavinwunz/internship-hub on GitHub">Star</a>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- CLOSING SOON -->
+  <section id="deadlines">
+    <div class="alert">
+      <h2>🚨 Closing soonest — apply this week</h2>
+      <p class="sub">Nearest <em>effective</em> deadlines as of Aug 20, 2026. Most tech firms hire <strong>rolling</strong> — a posting can close within weeks.</p>
+      <div class="table-scroll">
+      <table>
+        <thead><tr><th>Company</th><th>Effective deadline</th><th>Why now</th></tr></thead>
+        <tbody>
+          <tr><td><strong>JPMorgan</strong> · US Markets Summer Analyst</td><td><span class="pill red">~Oct 1</span></td><td>One of the few real posted dates.</td></tr>
+          <tr><td><strong>Goldman Sachs</strong> · Summer Analyst (incl. Engineering)</td><td><span class="pill red">~Oct 4</span></td><td>Opened ~Aug 15; rolling within window.</td></tr>
+          <tr><td><strong>Citadel / Citadel Securities</strong></td><td><span class="pill amber">~70% by mid-Oct</span></td><td>Live since early July; seats fill continuously.</td></tr>
+          <tr><td><strong>Jane Street</strong> · SWE / Quant Trading</td><td><span class="pill amber">calendars fill late Oct</span></td><td>Live since ~Jul 12; recruits fast.</td></tr>
+          <tr><td><strong>Nvidia</strong></td><td><span class="pill amber">~60% gone by end Nov</span></td><td>Front-loaded; beat the fall crush.</td></tr>
+        </tbody>
+      </table>
+      </div>
+      <div class="note">⚠️ Dates compiled from third-party trackers &amp; hiring guides — <strong>not official</strong>, several estimated from past cycles. Always verify on the company careers page. The real strategy: <strong>apply the day it opens.</strong></div>
+    </div>
+  </section>
+
+  <!-- TIMELINE -->
+  <section>
+    <h2>📅 Month-by-month</h2>
+    <p class="sub">When the big names open &amp; close for Summer 2027.</p>
+    <div class="timeline">
+      <div class="month"><div class="m">JUL '26</div><div class="e">HRT, Citadel, Jane Street, Amazon go live</div></div>
+      <div class="month now"><div class="m">AUG ★ now</div><div class="e">Microsoft, Meta, Nvidia, Goldman, Jump, Optiver, Two Sigma open</div></div>
+      <div class="month"><div class="m">SEP '26</div><div class="e">Google STEP opens · Apple window · Amazon by end of Sep</div></div>
+      <div class="month"><div class="m">OCT '26</div><div class="e">⚠️ Crunch: Goldman ~4th, JPMorgan ~1st, Jane St / Citadel fill</div></div>
+      <div class="month"><div class="m">NOV '26</div><div class="e">Nvidia ~60% gone · Meta filling · Bloomberg soft deadline</div></div>
+      <div class="month"><div class="m">DEC '26</div><div class="e">Quant decisions land · Citadel portal closes</div></div>
+      <div class="month"><div class="m">JAN '27</div><div class="e">Last rolling spots (Meta, Bloomberg finals)</div></div>
+    </div>
+  </section>
+
+  <!-- FULL DEADLINE TABLES -->
+  <section>
+    <h2>🏢 Full deadline board</h2>
+    <p class="sub">Big tech · quant · finance. See the <a href="https://github.com/gavinwunz/internship-hub/blob/main/DEADLINES.md">full timeline on GitHub</a>.</p>
+    <div class="cols">
+      <div class="card">
+        <h3>💻 Big Tech</h3>
+        <div class="table-scroll">
+        <table>
+          <tr><td>Google (SWE)</td><td><span class="pill amber">rolling · closes fast</span></td></tr>
+          <tr><td>Microsoft</td><td><span class="pill green">open now</span></td></tr>
+          <tr><td>Amazon (SDE)</td><td><span class="pill amber">apply by end Sep</span></td></tr>
+          <tr><td>Meta</td><td><span class="pill amber">fills by Nov</span></td></tr>
+          <tr><td>Apple</td><td><span class="pill green">Sep–Dec window</span></td></tr>
+          <tr><td>Nvidia</td><td><span class="pill amber">~60% by end Nov</span></td></tr>
+          <tr><td>Bloomberg (SWE)</td><td><span class="pill amber">soft Oct–Nov</span></td></tr>
+        </table>
+        </div>
+      </div>
+      <div class="card">
+        <h3>📈 Quant / Trading</h3>
+        <div class="table-scroll">
+        <table>
+          <tr><td>Jane Street</td><td><span class="pill amber">calendars fill late Oct</span></td></tr>
+          <tr><td>Citadel / Sec.</td><td><span class="pill amber">~70% by mid-Oct</span></td></tr>
+          <tr><td>Hudson River Trading</td><td><span class="pill amber">golden window now</span></td></tr>
+          <tr><td>Jump Trading</td><td><span class="pill green">reqs live</span></td></tr>
+          <tr><td>Two Sigma</td><td><span class="pill green">open · decide by Dec</span></td></tr>
+          <tr><td>Optiver</td><td><span class="pill green">open · rolling</span></td></tr>
+          <tr><td>IMC</td><td><span class="pill green">open now</span></td></tr>
+        </table>
+        </div>
+      </div>
+    </div>
+    <div class="card" style="margin-top:16px">
+      <h3>🏦 Finance / Banking (Eng &amp; Quant tracks)</h3>
+      <p>Traditional IB / S&amp;T summer-analyst roles largely <strong>closed Dec 2025–Jan 2026</strong>. Quant &amp; engineering tracks run later and are live now.</p>
+      <div class="table-scroll">
+      <table>
+        <tr><td>Goldman Sachs · Summer Analyst (19 divisions incl. Engineering)</td><td><span class="pill red">~Oct 4</span></td></tr>
+        <tr><td>JPMorgan · US Markets Summer Analyst</td><td><span class="pill red">~Oct 1</span></td></tr>
+        <tr><td>Morgan Stanley · Quant tracks</td><td><span class="pill amber">varies by role</span></td></tr>
+      </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- LIVE TRACKERS -->
+  <section id="trackers">
+    <h2>🔴 Live internship trackers</h2>
+    <p class="sub">Auto-updated daily/hourly with real open postings. Star &amp; watch these — speed of applying is your biggest lever.</p>
+    <div class="grid g3">
+      <a class="card" href="https://github.com/SimplifyJobs/Summer2027-Internships">
+        <h3>SimplifyJobs · Summer2027 <span class="tag">daily</span></h3>
+        <p>The gold standard. SWE, data, AI, quant, PM &amp; hardware, updated daily by Pitt CSC + Simplify.</p>
+        <span class="repo">SimplifyJobs/Summer2027-Internships</span>
+      </a>
+      <a class="card" href="https://github.com/vanshb03/Summer2027-Internships">
+        <h3>vanshb03 · Summer2027 <span class="tag">+ off-season</span></h3>
+        <p>SWE + a dedicated off-season list + new grad. Maintained by Vansh &amp; Ouckah.</p>
+        <span class="repo">vanshb03/Summer2027-Internships</span>
+      </a>
+      <a class="card" href="https://github.com/speedyapply/2027-SWE-College-Jobs">
+        <h3>speedyapply · SWE <span class="tag">daily</span></h3>
+        <p>SWE internships + new grad, FAANG+/Quant/Other tiers, last-120-days priority.</p>
+        <span class="repo">speedyapply/2027-SWE-College-Jobs</span>
+      </a>
+      <a class="card" href="https://github.com/speedyapply/2027-AI-College-Jobs">
+        <h3>speedyapply · AI/ML <span class="tag">daily</span></h3>
+        <p>Same engine, focused on AI/ML &amp; Data Science roles.</p>
+        <span class="repo">speedyapply/2027-AI-College-Jobs</span>
+      </a>
+      <a class="card" href="https://github.com/zshah101/Automated-List-Of-Summer-2027-and-Fall-2026-Tech-Internships">
+        <h3>zshah101 · Auto-scraper <span class="tag">~30 min</span></h3>
+        <p>Pulls 4,300+ job boards every ~30 min with visa-sponsorship / H-1B flags.</p>
+        <span class="repo">zshah101/Automated-List…</span>
+      </a>
+      <a class="card" href="https://github.com/jobright-ai/2026-Software-Engineer-Internship">
+        <h3>jobright-ai · Internships</h3>
+        <p>Curated SWE internships from a large daily-updated pool. (New-grad list too.)</p>
+        <span class="repo">jobright-ai/2026-Software-Engineer-Internship</span>
+      </a>
+      <a class="card" href="https://github.com/sndsh404/summer-2027-internships">
+        <h3>sndsh404 · Summer2027</h3>
+        <p>US SWE, ML, hardware, quant &amp; PM; off-season friendly, regularly updated.</p>
+        <span class="repo">sndsh404/summer-2027-internships</span>
+      </a>
+      <a class="card" href="https://github.com/LorenzoLaCorte/european-tech-internships-2026">
+        <h3>🇪🇺 European tracker</h3>
+        <p>The best open-source EU tracker — internships, new grad &amp; research (EarlyCareersEU).</p>
+        <span class="repo">LorenzoLaCorte/european-tech-internships-2026</span>
+      </a>
+      <a class="card" href="https://github.com/poteto/hiring-without-whiteboards">
+        <h3>⭐ Hiring w/o whiteboards</h3>
+        <p>Companies with sane, non-whiteboard technical hiring processes.</p>
+        <span class="repo">poteto/hiring-without-whiteboards</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- PREP -->
+  <section>
+    <h2>🧠 Prep &amp; apply</h2>
+    <p class="sub">Interview, resume &amp; portfolio resources — the rest of the funnel.</p>
+    <div class="grid g2">
+      <a class="card" href="https://github.com/yangshun/tech-interview-handbook">
+        <h3>🧠 Tech Interview Handbook</h3>
+        <p>The best all-in-one: resume, coding, behavioral &amp; negotiation. 100k+ ⭐.</p>
+      </a>
+      <a class="card" href="https://neetcode.io/practice">
+        <h3>🎯 NeetCode / Blind 75</h3>
+        <p>Canonical curated LeetCode set + pattern videos. Start DSA here.</p>
+      </a>
+      <a class="card" href="https://github.com/donnemartin/system-design-primer">
+        <h3>🏗️ System Design Primer</h3>
+        <p>The definitive open-source system-design study resource.</p>
+      </a>
+      <a class="card" href="https://github.com/jakegut/resume">
+        <h3>📄 Jake's Resume</h3>
+        <p>The de-facto-standard ATS-friendly LaTeX resume template.</p>
+      </a>
+      <a class="card" href="https://github.com/MunGell/awesome-for-beginners">
+        <h3>🌱 Awesome for Beginners</h3>
+        <p>Beginner-friendly open-source issues — build your portfolio with real PRs.</p>
+      </a>
+      <a class="card" href="https://github.com/lodthe/awesome-internships">
+        <h3>📖 Awesome Internships</h3>
+        <p>Curated meta-list of internship guides, courses &amp; referral tools.</p>
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p>Curated with care · not affiliated with any listed project — all credit to their maintainers.</p>
+  <p style="margin-top:8px">
+    <a href="https://github.com/gavinwunz/internship-hub">⭐ Star on GitHub</a> ·
+    <a href="https://github.com/gavinwunz/internship-hub/blob/main/DEADLINES.md">Deadlines</a> ·
+    <a href="https://github.com/gavinwunz/internship-hub/blob/main/CONTRIBUTING.md">Contribute</a>
+  </p>
+</footer>
+
+<!-- Official GitHub star button -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+</body>
+</html>
