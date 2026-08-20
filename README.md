@@ -12,6 +12,8 @@
 ![Maintained](https://img.shields.io/badge/maintained-yes-success.svg)
 ![Last Updated](https://img.shields.io/badge/updated-Aug%202026-informational.svg)
 
+### 🌐 **[Live site → gavinwunz.github.io/internship-hub](https://gavinwunz.github.io/internship-hub/)**
+
 </div>
 
 ---
