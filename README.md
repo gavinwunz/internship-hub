@@ -18,12 +18,21 @@
 
 > **📌 Cycle note (updated Aug 2026):** The **Summer 2027** recruiting season is the one that's actively hiring right now. Summer 2026 links are kept below as archives/off-season reference. Big-tech applications for the following summer typically open **July–September**, so *now* is the time.
 
+<div align="center">
+
+### 🗓️ **[→ See the SUMMER 2027 DEADLINE TIMELINE ←](DEADLINES.md)**
+*Google · Meta · Amazon · Microsoft · Apple · Nvidia · Jane Street · Citadel · HRT · Goldman Sachs · JPMorgan & more — when each opens & closes*
+
+</div>
+
 ---
 
 ## 📖 Table of Contents
 
 - [Why this repo](#-why-this-repo)
+- [🗓️ Deadline timeline](DEADLINES.md) — big-name application windows
 - [🔴 Live internship trackers](#-live-internship-trackers-start-here) — start here
+- [📚 Every similar repo (master list)](#-every-similar-repo-master-list)
 - [🌍 International & regional](#-international--regional)
 - [🧠 Interview preparation](#-interview-preparation)
 - [🏗️ System design](#️-system-design)
@@ -69,10 +78,37 @@ These repos are auto-updated daily/hourly with real, open postings. **Star them,
 
 ---
 
+## 📚 Every similar repo (master list)
+
+A near-exhaustive index of GitHub repos in this space, so you can pick your favorites. (Trackers above are the ones we recommend starting with.)
+
+**🔴 Live job trackers**
+- [SimplifyJobs/Summer2027-Internships](https://github.com/SimplifyJobs/Summer2027-Internships) — the flagship, daily updates
+- [vanshb03/Summer2027-Internships](https://github.com/vanshb03/Summer2027-Internships) — SWE + [off-season](https://github.com/vanshb03/Summer2027-Internships/blob/dev/OFFSEASON_README.md) + new grad
+- [speedyapply/2027-SWE-College-Jobs](https://github.com/speedyapply/2027-SWE-College-Jobs) — SWE, daily
+- [speedyapply/2027-AI-College-Jobs](https://github.com/speedyapply/2027-AI-College-Jobs) — AI/ML & Data Science
+- [jobright-ai/2026-Software-Engineer-Internship](https://github.com/jobright-ai/2026-Software-Engineer-Internship) — SWE internships
+- [jobright-ai/2026-Software-Engineer-New-Grad](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) — new grad SWE
+- [zshah101/Automated-List...Internships](https://github.com/zshah101/Automated-List-Of-Summer-2027-and-Fall-2026-Tech-Internships) — auto-scraped, 4,300+ boards, visa flags
+- [sndsh404/summer-2027-internships](https://github.com/sndsh404/summer-2027-internships) — US, off-season friendly
+
+**📖 Meta / "awesome" lists & curated opportunities**
+- [lodthe/awesome-internships](https://github.com/lodthe/awesome-internships) — curated list of tech-internship *resources* (guides, referral tools, courses)
+- [LuisaE/opportunities](https://github.com/LuisaE/opportunities) — CS & finance exploratory programs, underclassmen internships, scholarships, mentorship
+- [poteto/hiring-without-whiteboards](https://github.com/poteto/hiring-without-whiteboards) — ⭐️ companies with sane (non-whiteboard) hiring processes
+
+**🌍 Regional**
+- [LorenzoLaCorte/european-tech-internships-2026](https://github.com/LorenzoLaCorte/european-tech-internships-2026) — European internships + new grad + research (powers EarlyCareersEU)
+
+> Spot one we missed? [PR it in](CONTRIBUTING.md) — the goal is *every* worthwhile repo indexed here.
+
+---
+
 ## 🌍 International & regional
 
 Most trackers above are **US / Canada / Remote**. If you're elsewhere:
 
+- 🇪🇺 **[LorenzoLaCorte/european-tech-internships-2026](https://github.com/LorenzoLaCorte/european-tech-internships-2026)** — the best open-source EU tracker (internships, new grad, research; searchable via EarlyCareersEU).
 - 🔎 Browse the live **[`internships`](https://github.com/topics/internships)** and **[`software-internships`](https://github.com/topics/software-internships)** GitHub topics — regional lists (UK, EU, India, etc.) surface here.
 - 🏷️ Filter US trackers for the **visa-sponsorship / H-1B** flags where provided (e.g. zshah101's list).
 
