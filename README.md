@@ -148,6 +148,7 @@ Usually not required for internships, but great for standout candidates and new-
 | **[Overleaf one-click version](https://www.overleaf.com/latex/templates/jakes-resume/syzfjbzwjncs)** | Same template, no LaTeX setup required. |
 | **[ManiMozaffar/awesome-resumes](https://github.com/ManiMozaffar/awesome-resumes)** | Tips, guidelines, and examples across IT fields. |
 | **[sauravhathi/atsresume](https://github.com/sauravhathi/atsresume)** | A web builder that outputs ATS-optimized resumes. |
+| **[ResumeAI](https://withresumeai.com/ats-checker)** | Free ATS resume checker (3/day anonymous, 10/day free account) + open [State of ATS 2026](https://withresumeai.com/reports/state-of-ats-2026) dataset (738 employers, Workday 37.9%). |
 
 **ATS rules of thumb:** single column, no tables/images/icons, standard headings (Education / Experience / Projects / Skills), and mirror keywords from the job description.
 
