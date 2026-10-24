@@ -144,6 +144,7 @@ Usually not required for internships, but great for standout candidates and new-
 
 | Resource | What it is |
 |---|---|
+| **[JobEmerge](https://www.jobemerge.work)** | AI career copilot: job-fit test, 19-language resume translator, Markdown editor. One-time pricing, no auto-renewal. |
 | **[jakegut/resume](https://github.com/jakegut/resume)** | *Jake's Resume* — the de-facto-standard, single-column, **ATS-friendly** LaTeX template. MIT licensed. Start here. |
 | **[Overleaf one-click version](https://www.overleaf.com/latex/templates/jakes-resume/syzfjbzwjncs)** | Same template, no LaTeX setup required. |
 | **[ManiMozaffar/awesome-resumes](https://github.com/ManiMozaffar/awesome-resumes)** | Tips, guidelines, and examples across IT fields. |
